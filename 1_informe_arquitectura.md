@@ -6,7 +6,7 @@ Sistema para la generación de números consecutivos para turnos de alta disponi
 
 Desarrollo de una API web que consiste en un _end-point_ con las siguientes caracteristicas:
 
-- **Request esperada**: url de la forma _http://turnomatic.com/turno/:group_id
+- **Request esperada**: url de la forma _http://turnomatic.com/turno/:group_id_
     - Donde _group\_id_ será un identificador de grupo para generar su propio contador de turnos
 
 - **Respuesta del sistema**: archivo formato _json_ con el nombre del grupo y el número de turno correspondiente. Ejemplo
@@ -79,8 +79,10 @@ Se ha configurado un _grupo de autoescalado_ con las siguientes caracteristicas:
 
 **AWS**
 
-- Media de uso de CPU
-- Networking I/O
+- Media y percentil 95 de uso de CPU de los nodos web
+- Networking I/O de los nodos web
+- Media y percentil 95 de uso de CPU de redis
+- Networking I/O de redis
 - Nº nodos creados
 - Nº Instancias de Autoescalado
 - Nº Errores HTTP 5XX y 4XX
