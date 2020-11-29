@@ -147,7 +147,7 @@ Para conseguirlo se llevaran a cabo los siguientes cambios:
 
 - Aumentamos el número  de request por segundo con respecto a las pruebas anteriores
 - Se han reducido los tiempos de respuesta de los _endpoint_ de la aplicación con respecto a las pruebas anteriores
-- El consumo de CPU en el grupo de máquinas se ha reducido a 70%
+- El consumo de CPU en el grupo de máquinas se ha reducido a 70% (observado en cloudwatch a las 12:00)
 - **Detectada una limitacion del sistema:**La cuenta de AWS utilizada tiene un limite de vCPU de 32. Esa es la razón por la cual en ésta prueba solo se han llegada a utilizar 8 nodos web
 
 
@@ -168,4 +168,4 @@ Resultados de las pruebas de carga realizadas a una sola instancia del tipo _c5.
 # Acciones
 
 1. Es necesario realizar cambios a nivel de la cuenta de AWS para poder hacer uso máximo de instances EC2 (máquinas virtuales) de mayor capacidad de computo
-2. Es necesario llevar a cabo cambios en el sistema de balanceamiento web para aumentar el rendimiento en éste punto
+2. Es necesario llevar a cabo cambios en el sistema de balanceamiento web para aumentar el rendimiento en éste punto (implementar un baleanceador propio en EC2 o balanceo por DNS)
